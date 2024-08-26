@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.heading {
+    color: aqua;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 400px;
+    height: 500px;
+}
+
+.calculator .value {
+    grid-column: span 4;
+    height: 120px;
+    text-align: right;
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 24px;
+    background: white;
+    color: rgb(44, 82, 82);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.calculator span {
+    display: grid;
+    width: 80px;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    place-items: center;
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    transition: background 0.3s, box-shadow 0.3s, border 0.3s;
+}
+
+.calculator span:active {
+    background: aqua;
+    color: rgb(44, 82, 82);
+    box-shadow: 0 4px 8px aqua;
+    border: 2px solid rgb(44, 82, 82);
+}
+
+.calculator span.clear {
+    grid-column: span 2;
+    width: 160px;
+    background: aqua;
+    color: rgb(44, 82, 82);
+}
+
+.calculator span.plus {
+    grid-row: span 2;
+    height: 160px;
+}
+
+.calculator span.equal {
+    background: aqua;
+    color: rgb(44, 82, 82);
+}
+
+@media (max-width: 420px) {
+
+    body {
+        width: 98vw;
+        height: 78vh;
+    }
+
+    .calculator {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        width: 351px;
+        height: 599px;
+    }
+    .calculator span {
+        display: grid;
+        width: 59px;
+        height: 62px;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        place-items: center;
+        border: 2px solid rgba(0, 0, 0, 0.6);
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(4px);
+        transition: background 0.3s, box-shadow 0.3s, border 0.3s;
+    }
+    .calculator {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0px;
+        width: 298px;
+        height: 521px;
+    }
+}
