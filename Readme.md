@@ -12,10 +12,6 @@ This is a simple and visually appealing calculator built using HTML and CSS. It 
 - **Interactive UI:** Smooth transitions and button feedback.
 - **Basic Operations:** Supports addition, subtraction, multiplication, and division.
 
-## Screenshots
-
-![Calculator Screenshot](https://via.placeholder.com/400x500.png?text=Calculator+Screenshot)
-
 ## Getting Started
 
 To get started with this project, follow these instructions:
